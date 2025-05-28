@@ -211,8 +211,8 @@ export default function DownloadInvoicePage({ params }: { params: Promise<{ id: 
 
         ctx.fillText(description, 60, yPosition + 18)
         ctx.fillText(item.quantity.toString(), 400, yPosition + 18)
-        ctx.fillText(`$${item.unitPrice.toFixed(2)}`, 500, yPosition + 18)
-        ctx.fillText(`$${item.total.toFixed(2)}`, 650, yPosition + 18)
+        ctx.fillText(`Rs${item.unitPrice.toFixed(2)}`, 500, yPosition + 18)
+        ctx.fillText(`Rs${item.total.toFixed(2)}`, 650, yPosition + 18)
         yPosition += 25
       })
 
@@ -222,10 +222,10 @@ export default function DownloadInvoicePage({ params }: { params: Promise<{ id: 
       const totalsX = 550
       ctx.font = "12px Arial"
       ctx.fillText("Subtotal:", totalsX, yPosition)
-      ctx.fillText(`$${invoice.subtotal.toFixed(2)}`, 650, yPosition)
+      ctx.fillText(`Rs${invoice.subtotal.toFixed(2)}`, 650, yPosition)
       yPosition += 20
       ctx.fillText("Tax:", totalsX, yPosition)
-      ctx.fillText(`$${invoice.tax.toFixed(2)}`, 650, yPosition)
+      ctx.fillText(`Rs${invoice.tax.toFixed(2)}`, 650, yPosition)
       yPosition += 20
 
       // Final total
@@ -234,7 +234,7 @@ export default function DownloadInvoicePage({ params }: { params: Promise<{ id: 
       ctx.fillStyle = "#ffffff"
       ctx.font = "bold 12px Arial"
       ctx.fillText("TOTAL:", totalsX, yPosition + 12)
-      ctx.fillText(`$${invoice.total.toFixed(2)}`, 650, yPosition + 12)
+      ctx.fillText(`Rs${invoice.total.toFixed(2)}`, 650, yPosition + 12)
       yPosition += 40
 
       // Payment terms
