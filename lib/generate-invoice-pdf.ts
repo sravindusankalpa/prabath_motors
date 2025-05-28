@@ -96,8 +96,8 @@ export const createPrintableInvoice = (invoice: any): string => {
             <tr style="background-color: ${index % 2 === 0 ? "#f3f4f6" : "white"};">
               <td style="padding: 8px 16px; font-size: 14px;">${item.description}</td>
               <td style="padding: 8px 16px; font-size: 14px; text-align: right;">${item.quantity}</td>
-              <td style="padding: 8px 16px; font-size: 14px; text-align: right;">$${item.unitPrice.toFixed(2)}</td>
-              <td style="padding: 8px 16px; font-size: 14px; text-align: right;">$${item.total.toFixed(2)}</td>
+              <td style="padding: 8px 16px; font-size: 14px; text-align: right;">Rs.${item.unitPrice.toFixed(2)}</td>
+              <td style="padding: 8px 16px; font-size: 14px; text-align: right;">Rs.${item.total.toFixed(2)}</td>
             </tr>
           `,
             )
@@ -111,15 +111,15 @@ export const createPrintableInvoice = (invoice: any): string => {
       <div style="width: 256px;">
         <div style="display: flex; justify-content: space-between; padding: 8px 0;">
           <span style="font-weight: 600;">Subtotal:</span>
-          <span>$${invoice.subtotal.toFixed(2)}</span>
+          <span>Rs.${invoice.subtotal.toFixed(2)}</span>
         </div>
         <div style="display: flex; justify-content: space-between; padding: 8px 0;">
           <span style="font-weight: 600;">Tax:</span>
-          <span>$${invoice.tax.toFixed(2)}</span>
+          <span>Rs.${invoice.tax.toFixed(2)}</span>
         </div>
         <div style="display: flex; justify-content: space-between; padding: 8px 16px; background-color: #1A66B3; color: white;">
           <span style="font-weight: bold;">TOTAL:</span>
-          <span style="font-weight: bold;">$${invoice.total.toFixed(2)}</span>
+          <span style="font-weight: bold;">Rs.${invoice.total.toFixed(2)}</span>
         </div>
       </div>
     </div>
