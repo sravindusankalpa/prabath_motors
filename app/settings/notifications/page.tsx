@@ -1,12 +1,14 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
-import { Car } from "lucide-react"
-import { DashboardNav } from "@/components/dashboard-nav"
+'use client';
+
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Car } from "lucide-react";
+import { DashboardNav } from "@/components/dashboard-nav";
 
 export default function NotificationSettingsPage() {
   return (
@@ -45,10 +47,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="vehicle-received">Vehicle Received</Label>
                     <Input
                       id="vehicle-received"
-                      defaultValue="Hello {{customer_name}}, we've received your {{vehicle_info}} for {{service_name}}. We'll begin working on it shortly."
+                      defaultValue={`Hello {customer_name}, we've received your {vehicle_info} for {service_name}. We'll begin working on it shortly.`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}, {{ service_name }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}, {'{service_name}'}
                     </p>
                   </div>
 
@@ -56,10 +58,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="diagnosis">Diagnosis Complete</Label>
                     <Input
                       id="diagnosis"
-                      defaultValue="Hello {{customer_name}}, we've completed the diagnosis of your {{vehicle_info}}. {{diagnosis_results}}"
+                      defaultValue={`Hello {customer_name}, we've completed the diagnosis of your {vehicle_info}. {diagnosis_results}`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}, {{ diagnosis_results }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}, {'{diagnosis_results}'}
                     </p>
                   </div>
 
@@ -67,10 +69,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="in-progress">Repair In Progress</Label>
                     <Input
                       id="in-progress"
-                      defaultValue="Hello {{customer_name}}, we've started working on your {{vehicle_info}}. Estimated completion time: {{estimated_completion}}."
+                      defaultValue={`Hello {customer_name}, we've started working on your {vehicle_info}. Estimated completion time: {estimated_completion}.`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}, {{ estimated_completion }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}, {'{estimated_completion}'}
                     </p>
                   </div>
 
@@ -78,10 +80,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="parts-ordered">Parts Ordered</Label>
                     <Input
                       id="parts-ordered"
-                      defaultValue="Hello {{customer_name}}, we've ordered parts for your {{vehicle_info}}. Estimated arrival: {{parts_arrival}}."
+                      defaultValue={`Hello {customer_name}, we've ordered parts for your {vehicle_info}. Estimated arrival: {parts_arrival}.`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}, {{ parts_arrival }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}, {'{parts_arrival}'}
                     </p>
                   </div>
 
@@ -89,10 +91,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="waiting-approval">Waiting for Approval</Label>
                     <Input
                       id="waiting-approval"
-                      defaultValue="Hello {{customer_name}}, we need your approval for additional repairs on your {{vehicle_info}}. Please call us at {{garage_phone}}."
+                      defaultValue={`Hello {customer_name}, we need your approval for additional repairs on your {vehicle_info}. Please call us at {garage_phone}.`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}, {{ garage_phone }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}, {'{garage_phone}'}
                     </p>
                   </div>
 
@@ -100,10 +102,10 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="completed">Repair Completed</Label>
                     <Input
                       id="completed"
-                      defaultValue="Hello {{customer_name}}, great news! The repairs on your {{vehicle_info}} are complete. Your vehicle is ready for pickup."
+                      defaultValue={`Hello {customer_name}, great news! The repairs on your {vehicle_info} are complete. Your vehicle is ready for pickup.`}
                     />
                     <p className="text-xs text-muted-foreground">
-                      Available variables: {{ customer_name }}, {{ vehicle_info }}
+                      Available variables: {'{customer_name}'}, {'{vehicle_info}'}
                     </p>
                   </div>
                 </CardContent>
@@ -165,7 +167,7 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="booking-confirmation">Booking Confirmation</Label>
                     <Input
                       id="booking-confirmation"
-                      defaultValue="Hello {{customer_name}}, your appointment for {{service_name}} has been confirmed for {{appointment_date}} at {{appointment_time}}. Thank you for choosing our garage!"
+                      defaultValue={`Hello {customer_name}, your appointment for {service_name} has been confirmed for {appointment_date} at {appointment_time}. Thank you for choosing our garage!`}
                     />
                   </div>
 
@@ -173,7 +175,7 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="booking-reminder">Booking Reminder</Label>
                     <Input
                       id="booking-reminder"
-                      defaultValue="Hello {{customer_name}}, this is a reminder that your appointment for {{service_name}} is scheduled for tomorrow at {{appointment_time}}. See you soon!"
+                      defaultValue={`Hello {customer_name}, this is a reminder that your appointment for {service_name} is scheduled for tomorrow at {appointment_time}. See you soon!`}
                     />
                   </div>
                 </CardContent>
@@ -191,7 +193,7 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="invoice-generated">Invoice Generated</Label>
                     <Input
                       id="invoice-generated"
-                      defaultValue="Hello {{customer_name}}, your invoice #{{invoice_number}} for {{service_name}} has been generated. Total amount: {{invoice_amount}}. Thank you for your business!"
+                      defaultValue={`Hello {customer_name}, your invoice #{invoice_number} for {service_name} has been generated. Total amount: {invoice_amount}. Thank you for your business!`}
                     />
                   </div>
 
@@ -199,7 +201,7 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="payment-reminder">Payment Reminder</Label>
                     <Input
                       id="payment-reminder"
-                      defaultValue="Hello {{customer_name}}, this is a friendly reminder that invoice #{{invoice_number}} for {{invoice_amount}} is due on {{due_date}}. Please contact us if you have any questions."
+                      defaultValue={`Hello {customer_name}, this is a friendly reminder that invoice #{invoice_number} for {invoice_amount} is due on {due_date}. Please contact us if you have any questions.`}
                     />
                   </div>
 
@@ -207,7 +209,7 @@ export default function NotificationSettingsPage() {
                     <Label htmlFor="payment-received">Payment Received</Label>
                     <Input
                       id="payment-received"
-                      defaultValue="Hello {{customer_name}}, we've received your payment of {{payment_amount}} for invoice #{{invoice_number}}. Thank you for your business!"
+                      defaultValue={`Hello {customer_name}, we've received your payment of {payment_amount} for invoice #{invoice_number}. Thank you for your business!`}
                     />
                   </div>
                 </CardContent>
@@ -217,5 +219,5 @@ export default function NotificationSettingsPage() {
         </main>
       </div>
     </div>
-  )
+  );
 }
