@@ -40,8 +40,8 @@ export const createPrintableInvoice = (invoice: any): string => {
         <div style="margin-top: 8px; font-size: 14px;">
           <p>577 Mechanic Street, Autoville, AV 12345</p>
           <p>+1 (555) 123-4567</p>
-          <p>service@garagehub.com</p>
-          <p>www.garagehub.com</p>
+          <p>service@PRABATH MOTORS.com</p>
+          <p>www.PRABATH MOTORS.com</p>
         </div>
       </div>
       <div style="text-align: right;">

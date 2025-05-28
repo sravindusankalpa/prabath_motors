@@ -23,9 +23,9 @@ export default function LoginPage() {
 
   // Hardcoded credentials
   const validCredentials = [
-    { email: "admin@garagehub.com", password: "admin123", role: "admin" },
-    { email: "mechanic@garagehub.com", password: "mechanic123", role: "mechanic" },
-    { email: "staff@garagehub.com", password: "staff123", role: "staff" },
+    { email: "admin@PRABATH MOTORS.com", password: "admin123", role: "admin" },
+    { email: "mechanic@PRABATH MOTORS.com", password: "mechanic123", role: "mechanic" },
+    { email: "staff@PRABATH MOTORS.com", password: "staff123", role: "staff" },
   ]
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -58,7 +58,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen w-full flex-col items-center justify-center bg-muted/40 p-4">
       <Link href="/" className="mb-4 flex items-center gap-2 text-2xl font-bold">
         <Car className="h-8 w-8" />
-        <span>GarageHub</span>
+        <span>PRABATH MOTORS</span>
       </Link>
 
       <Card className="w-full max-w-md">

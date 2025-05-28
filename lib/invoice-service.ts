@@ -2,7 +2,7 @@
 // In a real application, this would connect to a database or API
 
 // Store invoices in localStorage for persistence
-const INVOICES_STORAGE_KEY = "garagehub_invoices"
+const INVOICES_STORAGE_KEY = "PRABATH MOTORS_invoices"
 
 // Get all invoices
 export const getInvoices = async () => {

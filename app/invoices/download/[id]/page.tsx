@@ -126,14 +126,14 @@ export default function DownloadInvoicePage({ params }: { params: Promise<{ id: 
       // Header - Company Info
       ctx.fillStyle = "#1A66B3"
       ctx.font = "bold 24px Arial"
-      ctx.fillText("GARAGEHUB", 50, yPosition)
+      ctx.fillText("PRABATH MOTORS", 50, yPosition)
       yPosition += 30
 
       ctx.fillStyle = "#000000"
       ctx.font = "12px Arial"
       ctx.fillText("577 Mechanic Street, Autoville, AV 12345", 50, yPosition)
       yPosition += 20
-      ctx.fillText("+1 (555) 123-4567 | service@garagehub.com", 50, yPosition)
+      ctx.fillText("+1 (555) 123-4567 | service@PRABATH MOTORS.com", 50, yPosition)
       yPosition += 40
 
       // Invoice Info (right side)

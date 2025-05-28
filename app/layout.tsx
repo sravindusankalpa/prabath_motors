@@ -7,7 +7,7 @@ import { AuthProvider } from "@/lib/auth-context"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "GarageHub - Garage Management System",
+  title: "PRABATH MOTORS - Garage Management System",
   description: "Complete garage management system with invoicing, booking, and inventory management",
     generator: 'v0.dev'
 }

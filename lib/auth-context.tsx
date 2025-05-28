@@ -24,7 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Check for existing user in localStorage on mount
   useEffect(() => {
-    const storedUser = localStorage.getItem("garagehub_user")
+    const storedUser = localStorage.getItem("PRABATH MOTORS_user")
     if (storedUser) {
       try {
         const parsedUser = JSON.parse(storedUser)
@@ -32,7 +32,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setIsAuthenticated(true)
       } catch (error) {
         console.error("Failed to parse stored user:", error)
-        localStorage.removeItem("garagehub_user")
+        localStorage.removeItem("PRABATH MOTORS_user")
       }
     }
   }, [])
@@ -40,13 +40,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = (userData: User) => {
     setUser(userData)
     setIsAuthenticated(true)
-    localStorage.setItem("garagehub_user", JSON.stringify(userData))
+    localStorage.setItem("PRABATH MOTORS_user", JSON.stringify(userData))
   }
 
   const logout = () => {
     setUser(null)
     setIsAuthenticated(false)
-    localStorage.removeItem("garagehub_user")
+    localStorage.removeItem("PRABATH MOTORS_user")
   }
 
   return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>{children}</AuthContext.Provider>

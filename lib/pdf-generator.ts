@@ -86,12 +86,12 @@ export class PDFGenerator {
   private drawHeader(yPos: number): number {
     this.ctx.fillStyle = "#1A66B3"
     this.ctx.font = "bold 24px Arial"
-    this.ctx.fillText("GARAGEHUB", 50, yPos)
+    this.ctx.fillText("PRABATH MOTORS", 50, yPos)
 
     this.ctx.fillStyle = "#000000"
     this.ctx.font = "12px Arial"
     this.ctx.fillText("577 Mechanic Street, Autoville, AV 12345", 50, yPos + 30)
-    this.ctx.fillText("+1 (555) 123-4567 | service@garagehub.com", 50, yPos + 50)
+    this.ctx.fillText("+1 (555) 123-4567 | service@PRABATH MOTORS.com", 50, yPos + 50)
 
     return yPos + 80
   }

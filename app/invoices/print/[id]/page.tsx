@@ -195,12 +195,12 @@ export default function PrintInvoicePage({ params }: { params: Promise<{ id: str
           {/* Header */}
           <div className="flex justify-between mb-8">
             <div>
-              <div className="text-2xl font-bold print-header text-blue-600">GARAGEHUB</div>
+              <div className="text-2xl font-bold print-header text-blue-600">PRABATH MOTORS</div>
               <div className="mt-2 text-sm">
                 <p>577 Mechanic Street, Autoville, AV 12345</p>
                 <p>+1 (555) 123-4567</p>
-                <p>service@garagehub.com</p>
-                <p>www.garagehub.com</p>
+                <p>service@PRABATH MOTORS.com</p>
+                <p>www.PRABATH MOTORS.com</p>
               </div>
             </div>
             <div className="text-right">
