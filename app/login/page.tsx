@@ -23,9 +23,9 @@ export default function LoginPage() {
 
   // Hardcoded credentials
   const validCredentials = [
-    { email: "admin@PRABATH MOTORS.com", password: "admin123", role: "admin" },
-    { email: "mechanic@PRABATH MOTORS.com", password: "mechanic123", role: "mechanic" },
-    { email: "staff@PRABATH MOTORS.com", password: "staff123", role: "staff" },
+    { email: "admin@prabathmotors.com", password: "admin123", role: "admin" },
+    { email: "mechanic@prabathmotors.com", password: "mechanic123", role: "mechanic" },
+    { email: "staff@prabathmotors.com", password: "staff123", role: "staff" },
   ]
 
   const handleSubmit = (e: React.FormEvent) => {
