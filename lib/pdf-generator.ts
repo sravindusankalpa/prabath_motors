@@ -159,8 +159,8 @@ export class PDFGenerator {
       this.ctx.fillStyle = "#000000"
       this.ctx.fillText(item.description, 60, yPos + 18)
       this.ctx.fillText(item.quantity.toString(), 400, yPos + 18)
-      this.ctx.fillText(`$${item.unitPrice.toFixed(2)}`, 500, yPos + 18)
-      this.ctx.fillText(`$${item.total.toFixed(2)}`, 650, yPos + 18)
+      this.ctx.fillText(`Rs.${item.unitPrice.toFixed(2)}`, 500, yPos + 18)
+      this.ctx.fillText(`Rs.${item.total.toFixed(2)}`, 650, yPos + 18)
       yPos += 25
     })
 
@@ -173,11 +173,11 @@ export class PDFGenerator {
     this.ctx.fillStyle = "#000000"
     this.ctx.font = "12px Arial"
     this.ctx.fillText("Subtotal:", totalsX, yPos)
-    this.ctx.fillText(`$${invoice.subtotal.toFixed(2)}`, 650, yPos)
+    this.ctx.fillText(`Rs.${invoice.subtotal.toFixed(2)}`, 650, yPos)
     yPos += 20
 
     this.ctx.fillText("Tax:", totalsX, yPos)
-    this.ctx.fillText(`$${invoice.tax.toFixed(2)}`, 650, yPos)
+    this.ctx.fillText(`Rs.${invoice.tax.toFixed(2)}`, 650, yPos)
     yPos += 20
 
     // Final total
@@ -186,7 +186,7 @@ export class PDFGenerator {
     this.ctx.fillStyle = "#ffffff"
     this.ctx.font = "bold 12px Arial"
     this.ctx.fillText("TOTAL:", totalsX, yPos + 12)
-    this.ctx.fillText(`$${invoice.total.toFixed(2)}`, 650, yPos + 12)
+    this.ctx.fillText(`Rs.${invoice.total.toFixed(2)}`, 650, yPos + 12)
 
     return yPos + 40
   }

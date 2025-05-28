@@ -80,8 +80,8 @@ export default function GeneratePdfPage() {
       },
     ],
     subtotal: 125.0,
-    tax: 10.0,
-    taxRate: 8,
+    tax: 0,
+    taxRate: 0,
     discount: 0.0,
     total: 135.0,
     notes: "Vehicle was inspected and all fluids were topped off. Recommended brake service in the next 3 months.",
@@ -183,18 +183,18 @@ export default function GeneratePdfPage() {
                 <tr>
                   <td>${item.description}</td>
                   <td>${item.quantity}</td>
-                  <td>$${item.unitPrice.toFixed(2)}</td>
-                  <td>$${item.total.toFixed(2)}</td>
+                  <td>Rs.${item.unitPrice.toFixed(2)}</td>
+                  <td>Rs.${item.total.toFixed(2)}</td>
                 </tr>
               `).join('')}
             </tbody>
           </table>
 
           <div class="totals">
-            <p>Subtotal: $${invoice.subtotal.toFixed(2)}</p>
-            <p>Tax (${invoice.taxRate}%): $${invoice.tax.toFixed(2)}</p>
-            <p>Discount: $${invoice.discount.toFixed(2)}</p>
-            <p><strong>Total: $${invoice.total.toFixed(2)}</strong></p>
+            <p>Subtotal: Rs.${invoice.subtotal.toFixed(2)}</p>
+            <p>Tax (${invoice.taxRate}%): Rs.${invoice.tax.toFixed(2)}</p>
+            <p>Discount: Rs.${invoice.discount.toFixed(2)}</p>
+            <p><strong>Total: Rs.${invoice.total.toFixed(2)}</strong></p>
           </div>
 
           <div class="notes">
