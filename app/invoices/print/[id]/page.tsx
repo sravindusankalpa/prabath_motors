@@ -263,8 +263,8 @@ export default function PrintInvoicePage({ params }: { params: Promise<{ id: str
                   <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                     <td className="border p-3 text-sm">{item.description}</td>
                     <td className="border p-3 text-sm text-right">{item.quantity}</td>
-                    <td className="border p-3 text-sm text-right">${item.unitPrice.toFixed(2)}</td>
-                    <td className="border p-3 text-sm text-right">${item.total.toFixed(2)}</td>
+                    <td className="border p-3 text-sm text-right">Rs.{item.unitPrice.toFixed(2)}</td>
+                    <td className="border p-3 text-sm text-right">Rs.{item.total.toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -276,15 +276,15 @@ export default function PrintInvoicePage({ params }: { params: Promise<{ id: str
             <div className="w-64">
               <div className="flex justify-between py-2">
                 <span className="font-semibold">Subtotal:</span>
-                <span>${invoice.subtotal.toFixed(2)}</span>
+                <span>Rs.{invoice.subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between py-2">
                 <span className="font-semibold">Tax:</span>
-                <span>${invoice.tax.toFixed(2)}</span>
+                <span>Rs.{invoice.tax.toFixed(2)}</span>
               </div>
               <div className="flex justify-between py-3 px-4 print-total-row bg-blue-600 text-white">
                 <span className="font-bold">TOTAL:</span>
-                <span className="font-bold">${invoice.total.toFixed(2)}</span>
+                <span className="font-bold">Rs.{invoice.total.toFixed(2)}</span>
               </div>
             </div>
           </div>
